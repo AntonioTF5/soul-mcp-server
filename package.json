@@ -1,0 +1,45 @@
+{
+  "name": "soul-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for validating and generating SOUL.md agent identity files from Claude Desktop.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "soul-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node --esm src/index.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "soul-md",
+    "ai-agents",
+    "claude"
+  ],
+  "author": "Anton Agafonov <anton@agenturo.app>",
+  "license": "MIT",
+  "homepage": "https://github.com/AntonioTF5/soul-mcp-server#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonioTF5/soul-mcp-server.git"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "ajv": "^8.17.1",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
