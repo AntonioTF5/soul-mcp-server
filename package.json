@@ -2,7 +2,6 @@
   "name": "soul-mcp-server",
   "version": "1.0.0",
   "description": "MCP server for validating and generating SOUL.md agent identity files from Claude Desktop.",
-  "type": "module",
   "main": "dist/index.js",
   "bin": {
     "soul-mcp-server": "./dist/index.js"

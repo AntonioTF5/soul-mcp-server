@@ -119,7 +119,7 @@ function validateSoul(filePath: string) {
     pass: valid,
     name: data.name,
     version: data.version,
-    errors: valid ? [] : (validate.errors ?? []).map(e => ({
+    errors: valid ? [] : (validate.errors ?? []).map((e: import("ajv").ErrorObject) => ({
       field: e.instancePath?.replace(/^\//, "") || (e.params as Record<string,string>)?.missingProperty || "root",
       message: e.message,
     })),
@@ -144,7 +144,6 @@ function scoreSoul(filePath: string) {
 }
 
 function generateTemplate(name: string, keywords: string[]): string {
-  const slug = name.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
   const domains = keywords.length > 0 ? keywords : ["(add your primary domain)"];
   return `---
 name: "${name}"
@@ -268,4 +267,6 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 });
 
 const transport = new StdioServerTransport();
-await server.connect(transport);
+(async () => {
+  await server.connect(transport);
+})();
