@@ -15,7 +15,7 @@ Add this to your `claude_desktop_config.json` (usually at `~/Library/Application
 ```json
 {
   "mcpServers": {
-    "soul-md": {
+    "soul-md-cli": {
       "command": "npx",
       "args": ["soul-mcp-server"]
     }
@@ -78,7 +78,7 @@ Full specification: [soul-spec](https://github.com/AntonioTF5/soul-spec)
 
 Curated community soul files: [awesome-soul-files](https://github.com/AntonioTF5/awesome-soul-files)
 
-CLI validator (no Claude required): [soul-cli](https://www.npmjs.com/package/soul-cli)
+CLI validator (no Claude required): [soul-md-cli](https://www.npmjs.com/package/soul-md-cli)
 
 ---
 
