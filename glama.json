@@ -1,0 +1,7 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/manifest/v1.json",
+  "name": "soul-mcp-server",
+  "description": "MCP server for SOUL.md — validate and generate soul files directly from Claude Desktop or any MCP-compatible client.",
+  "license": "MIT",
+  "repository": "https://github.com/AntonioTF5/soul-mcp-server"
+}
